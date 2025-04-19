@@ -1,0 +1,12 @@
+replicaCount: 2
+image:
+  repository: sample-app
+  tag: "prod"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 3000
+env:
+  - name: NODE_ENV
+    value: production
+resources: {}
