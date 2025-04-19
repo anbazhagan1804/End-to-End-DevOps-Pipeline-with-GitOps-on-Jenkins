@@ -1,0 +1,12 @@
+replicaCount: 1
+image:
+  repository: sample-app
+  tag: "dev"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 3000
+env:
+  - name: NODE_ENV
+    value: development
+resources: {}
